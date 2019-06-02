@@ -33,10 +33,11 @@ def input_str():
 	print(numbers)
 	v1,v2 = numbers[0],numbers[1]
 	#Falta arrumar a saída
-	print(str(v2[1])+" "+str(v1[1]))
 
-
-
+	if v1[1] > v2[1]:
+		print(str(v2[1])+" "+str(v1[1]))
+	else:
+		print(str(v1[1])+" "+str(v2[1]))
 
 
 input_str()
