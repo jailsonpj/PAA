@@ -22,6 +22,9 @@ def quicksort(l):
 
 	return []
 
+
+
+
 def input_str():
 	size = int(input())
 	numbers = input()	
