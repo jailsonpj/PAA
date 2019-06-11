@@ -9,27 +9,21 @@ def menor_custo(s, cc):
         return s
 
     else:
-        setores = []
+
         sum = 0
+        setor = 1
+        cont = 1
 
-        for i in range(s):
-            setores.append(i + 1)
+        for i in range(cc):
+            sum = sum + setor
+            cont = cont + 1
 
+        setor = setor + 1
 
-        qtd_cristais = 0
-        cristais_usados = 0
-        so = 0
-
-        for i in range(s+1):
-
-            if qtd_cristais < cc and cristais_usados <= s:
-                sum = sum + setores[so]
-                qtd_cristais = qtd_cristais + 1
-                cristais_usados = cristais_usados + 1
-            else:
-                so = so + 1
-                qtd_cristais = 0
-
+        while cont <= s:
+            sum = sum + setor
+            cont = cont + 1
+            setor = setor + 1
 
         return sum
 
@@ -55,12 +49,11 @@ def teste():
 
 def main():
     #print(teste())
-    entrada = input()    # distância dos setores
+    entrada = input()
     s, cc = entrada.split(' ')
     s = int(s)
     cc = int(cc)
     print(menor_custo(s, cc))
-    #print(menor_custo(5000, 2))
 
 
 if __name__ == "__main__":
